@@ -54,6 +54,7 @@ class Input : protected Pointers {
   int label_active;            // 0 = no label, 1 = looking for label
   char *labelstr;              // label string being looked for
   int jump_skip;               // 1 if skipping next jump, 0 otherwise
+  bool utf8_warn;              // true if need to warn about UTF-8 chars
 
   FILE **infiles;              // list of open input files
 
@@ -81,6 +82,7 @@ class Input : protected Pointers {
   void log();
   void next_command();
   void partition();
+  void plugin();
   void print();
   void python();
   void quit();
